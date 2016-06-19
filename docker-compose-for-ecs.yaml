@@ -1,0 +1,15 @@
+web:
+  image: docker.io/takyam/test-ecs-web
+  mem_limit: 268435456
+  ports:
+    - 80:80
+  expose:
+    - 80
+  links:
+    - app:php
+
+app:
+  image: docker.io/takyam/test-ecs-app
+  mem_limit: 268435456
+  expose:
+    - 9000
