@@ -1,0 +1,13 @@
+web:
+  build: ./web
+  ports:
+    - 80:80
+  expose:
+    - 80
+  links:
+    - app:php
+
+app:
+  build: ./app
+  expose:
+    - 9000
